@@ -35,6 +35,10 @@ RUN set -x \
 	&& echo "user:user" | chpasswd && adduser user sudo \
 	&& echo "user ALL=(ALL) NOPASSWD: ALL " >> /etc/sudoers
 
+RUN apt-get update \
+    && apt-get install graphviz -y \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY ./library_files/structured.py /usr/local/lib/python3.6/dist-packages/fastai/structured.py
 
 USER user

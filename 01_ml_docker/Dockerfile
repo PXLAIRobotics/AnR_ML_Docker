@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.0-devel-ubuntu18.04
+FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
 
 # We love UTF!
 ENV LANG C.UTF-8
@@ -9,7 +9,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 ENV NVIDIA_VISIBLE_DEVICES \
     ${NVIDIA_VISIBLE_DEVICES:-all}
 ENV NVIDIA_DRIVER_CAPABILITIES \
-    ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
+    ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}compute,video,graphics,utility
 
 RUN set -x \
 	&& apt-get update \
@@ -28,8 +28,10 @@ RUN set -x \
     && pip3 install --upgrade pip \
     && pip3 install --upgrade setuptools \
     && pip3 install powerline-shell  \
-    && pip3 install numpy pandas matplotlib regex scipy jupyter scikit-learn split-folders \
+    && pip3 install numpy==1.19.5 pandas==1.1.5 matplotlib==3.3.4 regex==2021.4.4 \
+    && pip3 install scipy==1.5.4 jupyter==1.0.0 scikit-learn==0.24.1 split-folders==0.4.3 \
     && pip3 install keras==2.3.1 tensorflow-gpu==1.14.0 fastai==0.7 \
+    && pip3 install flask==1.1.2 \
     && rm -rf /var/lib/apt/lists/* \
 	&& useradd -ms /bin/bash user \
 	&& echo "user:user" | chpasswd && adduser user sudo \

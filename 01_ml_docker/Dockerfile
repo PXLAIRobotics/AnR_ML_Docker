@@ -37,6 +37,14 @@ RUN set -x \
 	&& echo "user:user" | chpasswd && adduser user sudo \
 	&& echo "user ALL=(ALL) NOPASSWD: ALL " >> /etc/sudoers
 
+RUN pip3 install openpyxl==3.0.7
+
+RUN pip3 install ggplot==0.11.5 \
+    && pip3 install pdpbox==0.2.1 \
+    && pip3 install scikit-misc==0.1.3 \
+    && pip3 install treeinterpreter==0.2.3 \
+    && pip3 install plotly==4.14.3
+
 RUN apt-get update \
     && apt-get install graphviz -y \
     && rm -rf /var/lib/apt/lists/*

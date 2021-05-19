@@ -45,7 +45,9 @@ RUN pip3 install ggplot==0.11.5 \
     && pip3 install treeinterpreter==0.2.3 \
     && pip3 install plotly==4.14.3
 
-RUN pip3 install xgboost==1.4.1 \
+RUN pip3 install torchtext==0.2.3
+
+RUN pip3 install xgboost==1.3.3 \
     && pip3 install shap==0.39.0
 
 RUN apt-get update \

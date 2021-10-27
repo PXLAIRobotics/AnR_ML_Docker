@@ -1,3 +1,3 @@
 #!/bin/bash
 
-jupyter-notebook stop 9999
+jupyter lab stop 9999

@@ -54,9 +54,6 @@ RUN apt-get update \
     && apt-get install graphviz -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 uninstall tensorflow-gpu -y
-RUN pip3 install keras==2.6.0 tensorflow-gpu==2.6.0
-
 COPY ./library_files/structured.py /usr/local/lib/python3.6/dist-packages/fastai/structured.py
 
 USER user

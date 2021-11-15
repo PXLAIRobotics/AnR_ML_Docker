@@ -23,7 +23,7 @@ if [ $vendor == "NVIDIA" ]; then
         --volume="$XAUTH:$XAUTH" \
         --gpus all \
         -p 7777:7777 \
-        pxl_ml_image:latest \
+        pxl_ml_image_2:latest \
         bash
 else
     docker run --privileged -it --rm \
@@ -38,6 +38,6 @@ else
         -e "TERM=xterm-256color" \
         --cap-add SYS_ADMIN --device /dev/fuse \
         -p 7777:7777 \
-        pxl_ml_image:latest \
+        pxl_ml_image_2:latest \
         bash
 fi

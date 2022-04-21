@@ -30,12 +30,18 @@ RUN set -x \
     && pip3 install powerline-shell  \
     && pip3 install numpy==1.19.5 pandas==1.1.5 matplotlib==3.3.4 regex==2021.4.4 \
     && pip3 install scipy==1.5.4 jupyter==1.0.0 scikit-learn==0.24.1 split-folders==0.4.3 \
-    && pip3 install keras==2.3.1 tensorflow-gpu==1.14.0 fastai==0.7 \
+    && pip3 install keras==2.3.1 tensorflow-gpu==1.14.0 \
     && pip3 install flask==1.1.2 \
     && rm -rf /var/lib/apt/lists/* \
 	&& useradd -ms /bin/bash user \
 	&& echo "user:user" | chpasswd && adduser user sudo \
 	&& echo "user ALL=(ALL) NOPASSWD: ALL " >> /etc/sudoers
+
+# install fastai 0.7
+RUN set -x \
+        && wget  https://download.pytorch.org/whl/cpu/torch-0.3.1-cp36-cp36m-linux_x86_64.whl \
+        && pip install ./torch-0.3.1-cp36-cp36m-linux_x86_64.whl \
+        && pip install fastai==0.7
 
 RUN pip3 install openpyxl==3.0.7
 

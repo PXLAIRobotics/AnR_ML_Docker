@@ -57,3 +57,5 @@ To use multiple bash shells in the container, It's advised to either work with
 
 ## Prebuilt image
 You can find a prebuilt version of the image [right here](https://drive.google.com/drive/folders/1KqxEocjVeOtsky2f2vomWljWc7ir1reJ?usp=sharing).
+
+Use `docker load --input anr_ml_image.tar` to import it.

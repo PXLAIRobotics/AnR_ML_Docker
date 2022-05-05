@@ -53,3 +53,7 @@ To use multiple bash shells in the container, It's advised to either work with
 ```
 
 **Pro-tip: Learn to use `tmux`. It's awesome!**
+
+
+## Prebuilt image
+You can find a prebuilt version of the image [right here](https://drive.google.com/drive/folders/1KqxEocjVeOtsky2f2vomWljWc7ir1reJ?usp=sharing).

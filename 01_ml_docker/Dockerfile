@@ -11,6 +11,10 @@ ENV NVIDIA_VISIBLE_DEVICES \
 ENV NVIDIA_DRIVER_CAPABILITIES \
     ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}compute,video,graphics,utility
 
+# Nvidia changed their keys, but did NOT update the 18.04 images 
+# This "hacky" fix fetches the new keys from the nvidia download site.
+RUN apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
+
 RUN set -x \
 	&& apt-get update \
 	&& apt-get --with-new-pkgs upgrade -y \

@@ -60,6 +60,13 @@ RUN pip3 install torchtext==0.2.3
 RUN pip3 install xgboost==1.3.3 \
     && pip3 install shap==0.39.0
 
+
+RUN pip3 install cython==0.29.32 \
+    && pip3 install pystan==2.19.1.1 \
+    && pip3 install prophet==1.0.1
+
+RUN pip3 install flask_cors==3.0.10
+
 RUN apt-get update \
     && apt-get install graphviz -y \
     && rm -rf /var/lib/apt/lists/*

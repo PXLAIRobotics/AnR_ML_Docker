@@ -19,10 +19,13 @@ if [ $vendor == "NVIDIA" ]; then
         -v `pwd`/../commands/bin:/home/user/bin \
         -v `pwd`/../notebooks:/home/user/notebooks \
         -v `pwd`/../data:/home/user/data \
+        -v `pwd`/../app:/home/user/app \
         -env="XAUTHORITY=$XAUTH" \
         --volume="$XAUTH:$XAUTH" \
         --gpus all \
         -p 7777:7777 \
+        -p 8080:8080 \
+        -p 5000:5000 \
         pxl_ml_image:latest \
         bash
 else
@@ -33,11 +36,14 @@ else
         -v `pwd`/../commands/bin:/home/user/bin \
         -v `pwd`/../notebooks:/home/user/notebooks \
         -v `pwd`/../data:/home/user/data \
+        -v `pwd`/../app:/home/user/app \
         --device=/dev/dri:/dev/dri \
         --env="DISPLAY=$DISPLAY" \
         -e "TERM=xterm-256color" \
         --cap-add SYS_ADMIN --device /dev/fuse \
         -p 7777:7777 \
+        -p 8080:8080 \
+        -p 5000:5000 \
         pxl_ml_image:latest \
         bash
 fi

@@ -13,7 +13,6 @@ issue.
 * A UNIX-like operating system, preferably Linux. (Ubuntu 20.04 is recommended.)
 * The `glxinfo` command. (It's included with the `mesa-utils` package on Ubuntu. So, install this on the Linux host before building this repository. On an Ubuntu host, execute `sudo apt install mesa-utils` to install `glxinfo`.)
 * An operational docker daemon.
-* A terminal with a Nerd Font is highly recommended. ([Nerd Font Download page](https://www.nerdfonts.com/font-downloads))
 * Standard Bash and basic ROS knowledge.
 * A Nvidia graphics card capable of running hardware accelerated
   graphics. Although, any recent AMD or Intel GPU will also work flawlessly.

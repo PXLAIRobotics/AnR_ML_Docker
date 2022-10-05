@@ -56,6 +56,12 @@ To use multiple bash shells in the container, It's advised to either work with
 **Pro-tip: Learn to use `tmux`. It's awesome!**
 
 ### Windows
+Open Powershell
+
+Enter the following command to load the docker image:
+`docker load -i pxl_ml_image.tar`
+
+
 Use the following command to run the container:
 ```
 docker run --privileged -it --rm --name pxl_ml_container --hostname pxl_ml_container -v $PWD/../commands/bin:/home/user/bin -v $PWD/../notebooks:/home/user/notebooks -v $PWD/../data:/home/user/data -v $PWD/../app:/home/user/app  -p 7777:7777 -p 8080:8080 -p 5000:5000 pxl_ml_image:latest bash

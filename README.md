@@ -29,12 +29,16 @@ Look at the following site to solve it:
 [https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#install-guide)
 
 ## How to build the container
+### Linux/Unix
 A bash script is provided to build the container, it can be executed by entering
 the following command:
 
 ```bash
    $ ./001_build_images.sh
 ```
+
+### Windows
+For Windows, use the premade image at https://drive.google.com/drive/folders/1KqxEocjVeOtsky2f2vomWljWc7ir1reJ?usp=sharing and perform the steps in the next section.
 
 ## How to start the container
 

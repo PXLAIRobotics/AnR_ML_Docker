@@ -77,9 +77,11 @@ docker run --privileged -it --rm --name pxl_ml_container --hostname pxl_ml_conta
 When you're in the container execute this command to start jupyter:
 ```
 start_jupyter
+```
 
 or
 
+```
 jupyter-notebook --ip=0.0.0.0 --allow-root --no-browser --port=7777
 ```
 

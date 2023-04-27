@@ -92,4 +92,4 @@ In the container, navigate to the app folder and execute `python3 app.py`
 ## Prebuilt image
 You can find a prebuilt version of the image [right here](https://drive.google.com/drive/folders/1KqxEocjVeOtsky2f2vomWljWc7ir1reJ?usp=sharing).
 
-Use `docker load --input anr_ml_image.tar` to import it.
+Use `docker load --input pxl_ml_image_v1.0.tar` to import it.

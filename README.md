@@ -107,3 +107,7 @@ Use
 docker load --input pxl_ml_image_tf2.tar
 ```
 to import it.
+
+**Important!** 
+
+Make sure to still clone this repository, even if you use the prebuilt image. You will need the necessary scripts (003..., 004...) to make sure everything works correctly.

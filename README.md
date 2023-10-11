@@ -90,7 +90,12 @@ In the container, navigate to the app folder and execute `python3 app.py`
 
 
 ## Prebuilt image
-You can find a prebuilt version of the image [right here]([https://drive.google.com/drive/folders/1KqxEocjVeOtsky2f2vomWljWc7ir1reJ?usp=sharing](https://drive.google.com/drive/folders/1q6J5_DK0rruvrXXbhdr7EZx_jeZEMvQb?usp=sharing)https://drive.google.com/drive/folders/1q6J5_DK0rruvrXXbhdr7EZx_jeZEMvQb?usp=sharing).
+You can find a prebuilt version of the image [right here](https://drive.google.com/drive/folders/1q6J5_DK0rruvrXXbhdr7EZx_jeZEMvQb?usp=sharing).
+
+**Important!** 
+
+Make sure to still clone this repository, even if you use the prebuilt image. You will need the necessary scripts (003..., 004...) to make sure everything works correctly.
+
 
 **Tensorflow 1 version**
 
@@ -98,7 +103,13 @@ Use
 ```
 docker load --input pxl_ml_image_tf1.tar
 ```
-to import it.
+to import it, and
+
+```
+003_start_pxl_ml_container.sh
+```
+
+to start it.
 
 **Tensorflow 2 version**
 
@@ -106,8 +117,10 @@ Use
 ```
 docker load --input pxl_ml_image_tf2.tar
 ```
-to import it.
+to import it, and
 
-**Important!** 
+```
+004_start_pxl_ml_container_2.sh
+```
 
-Make sure to still clone this repository, even if you use the prebuilt image. You will need the necessary scripts (003..., 004...) to make sure everything works correctly.
+to start it.
